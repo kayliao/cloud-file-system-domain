@@ -1,0 +1,17 @@
+{
+  "name": "cloudfilesystem-ts",
+  "version": "1.0.0",
+  "description": "雲端檔案管理系統 TypeScript 範例",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc && cpy \"src/docs/*\" \"dist/\"",
+    "start": "node dist/main.js",
+    "test": "ts-node dist/test/testDomain.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.130",
+    "cpy-cli": "^7.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.9.3"
+  }
+}

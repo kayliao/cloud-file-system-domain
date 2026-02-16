@@ -1,0 +1,61 @@
+@startuml CloudFileSystem_Domain
+
+abstract FileSystemItem {
+  - name: string
+  + getTotalSize(): number
+  + print(indent?: string, isLast?: boolean): string
+  + toXml(indentLevel?: number): string
+}
+
+class Directory {
+  - children: FileSystemItem[]
+  + add(item: FileSystemItem): void
+  + getTotalSize(): number
+  + print(indent?: string, isLast?: boolean): string
+  + toXml(indentLevel?: number): string
+  + searchByExtension(ext: string): string[]
+}
+
+abstract class File {
+  - sizeInBytes: number
+  - createdAt: Date
+  - extension?: string
+  + getTotalSize(): number
+  + print(indent?: string, isLast?: boolean): string
+  + toXml(indentLevel?: number): string
+}
+
+class ImageFile {
+  - width: number
+  - height: number
+  + print(...)
+  + toXml(...)
+}
+
+class TextFile {
+  - encoding: string
+  + print(...)
+  + toXml(...)
+}
+
+class WordFile {
+  - pageCount: number
+  + print(...)
+  + toXml(...)
+}
+
+class GenericFile {
+  - typeName: string
+  + print(...)
+  + toXml(...)
+}
+
+FileSystemItem <|-- Directory
+FileSystemItem <|-- File
+File <|-- ImageFile
+File <|-- TextFile
+File <|-- WordFile
+File <|-- GenericFile
+Directory "1" *-- "*" FileSystemItem : contains
+
+@enduml
