@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>雲端檔案管理系統</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<h1>雲端檔案管理系統</h1>
+
+<!-- 原本四個功能按鈕 -->
+<div>
+    <button id="showTree">顯示目錄樹</button>
+    <button id="showXml">XML 輸出</button>
+    <button id="calculateSize">總容量</button>
+
+    <input type="text" id="searchExt" placeholder=".docx">
+    <button id="searchBtn">搜尋副檔名</button>
+</div>
+
+<hr>
+
+<h2>目錄樹 (每個目錄可單獨計算容量)</h2>
+<div id="treeContainer"></div>
+
+<hr>
+
+<h2>輸出結果</h2>
+<pre id="output"></pre>
+
+<script type="module">
+    import root from "./main.js";
+</script>
+
+</body>
+</html>
