@@ -6,12 +6,16 @@
   "scripts": {
     "build": "tsc && cpy \"src/docs/*\" \"dist/\"",
     "start": "node dist/main.js",
-    "test": "ts-node dist/test/testDomain.js"
+    "test": "ts-node dist/test/testDomain.js",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@types/node": "^18.19.130",
     "cpy-cli": "^7.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
