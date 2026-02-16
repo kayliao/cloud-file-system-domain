@@ -3,8 +3,10 @@
 A small TypeScript domain model for a cloud-style file system. This project demonstrates:
 
 - A simple domain model: `FileSystemItem`, `Directory`, `File` and concrete file types (`ImageFile`, `TextFile`, `WordFile`, `GenericFile`).
-- Validation: names are required and each `File` requires a `createdAt` timestamp.
+- Validation: `names` are required and each `File` requires a `createdAt` timestamp.
 - Pretty `print()` output and XML export with the format used in this project.
+- Functions include in this system: `Calculate Total Size of the Directory`, `Search by Extension` (both with or without . is acceptable), `XML Serialization`.
+- Other than `ImageFile`, `TextFile`, `WordFile`, a `GenericFile` was also added for those uncategorized file type (Not use in the sample case).
 
 ## Project layout
 
@@ -51,7 +53,8 @@ npm start
 
 See `docs/diagram.puml` for the domain model diagram you can paste into a PlantUML editor.
 Below is the graph
-<img width="921" height="523" alt="cloud-file-system-domain" src="https://github.com/user-attachments/assets/8ffbc370-41d3-4ee9-a61a-628ba142489f" />
+<img width="921" height="539" alt="cloud-file-system-domain" src="https://github.com/user-attachments/assets/46431166-9022-4bd2-ac1e-47b9c48cdadb" />
+
 
 
 ## GitHub Pages
