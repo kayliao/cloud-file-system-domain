@@ -14,8 +14,6 @@ export class File extends FileSystemItem {
         super(name);
         this.sizeInBytes = sizeInBytes;
         this.createdAt = createdAt;
-        /** parent directory reference is set when the file is added to a Directory */
-        this.parent = null;
         if (!createdAt || !(createdAt instanceof Date)) {
             throw new Error("File createdAt must be a Date and is required.");
         }
@@ -49,10 +47,6 @@ export class File extends FileSystemItem {
         catch (err) {
             throw new Error(`Failed to create XML for file ${this.name}: ${err}`);
         }
-    }
-    /** Set parent Directory reference after adding to a directory */
-    setParent(dir) {
-        this.parent = dir;
     }
     /** Format bytes into a human readable string */
     formatSize() {
