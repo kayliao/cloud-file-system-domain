@@ -8,9 +8,6 @@ export abstract class File extends FileSystemItem {
     /** optional extension string provided by concrete file types */
     extension?: string;
 
-    /** parent directory reference is set when the file is added to a Directory */
-    parent: any | null = null;
-
     /**
      * @param name - required file name (validated by FileSystemItem)
      * @param sizeInBytes - file size in bytes
@@ -51,11 +48,6 @@ export abstract class File extends FileSystemItem {
         } catch (err) {
             throw new Error(`Failed to create XML for file ${this.name}: ${err}`);
         }
-    }
-
-    /** Set parent Directory reference after adding to a directory */
-    setParent(dir: any) {
-        this.parent = dir;
     }
 
     /** Format bytes into a human readable string */
