@@ -1,6 +1,7 @@
 @startuml CloudFileSystem_Domain
 
 abstract FileSystemItem {
+  - parent: FileSystemItem | null
   - name: string
   + getTotalSize(): number
   + print(indent?: string, isLast?: boolean): string
