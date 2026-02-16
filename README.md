@@ -53,7 +53,8 @@ npm start
 
 See `docs/diagram.puml` for the domain model diagram you can paste into a PlantUML editor.
 Below is the graph
-<img width="921" height="539" alt="cloud-file-system-domain" src="https://github.com/user-attachments/assets/46431166-9022-4bd2-ac1e-47b9c48cdadb" />
+<img width="921" height="588" alt="cloud-file-system-domain" src="https://github.com/user-attachments/assets/d31f41d7-69ed-4a2b-9e04-fbc80f193406" />
+
 
 
 
