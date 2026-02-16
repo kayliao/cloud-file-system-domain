@@ -24,6 +24,9 @@ abstract class File {
   + getTotalSize(): number
   + print(indent?: string, isLast?: boolean): string
   + toXml(indentLevel?: number): string
+  # formatSize(): string
+  # getFullName(): string
+  # getXmlTag(): string
 }
 
 class ImageFile {
